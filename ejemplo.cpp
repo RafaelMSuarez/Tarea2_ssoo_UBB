@@ -13,12 +13,15 @@ using namespace std;
 int main() {
 
 	Mat image = imread("imagen_a_color.jpg", IMREAD_COLOR);
-	Mat3b output(image.rows, image.cols);
+	Mat output(image.rows, image.cols, CV_8UC1);
+	uchar greyW;
 
 	for(int r = 0; r < image.rows; r ++) {
 		for(int c = 0; c < image.cols; c++) {
 			Point3_<uchar>* p = image.ptr<Point3_<uchar> >(r, c);
-			output(r,c) = Vec3b(p->x, p->y, p->z);
+			// azul (B) -> x, verde(G) -> y, rojo(R) -> z
+			greyW = static_cast<uchar>((p->x) * 0.114 + (p->y) * 0.587 + (p->z) * 0.299);
+			output.at<uchar>(r,c) = greyW;
 		}
 	}
 
