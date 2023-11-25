@@ -4,7 +4,7 @@
 #include <opencv2/core/types.hpp>
 #include <opencv2/core/mat.hpp>
 #include <opencv2/imgcodecs.hpp>
-#include <fstream>
+#include <opencv2/highgui.hpp>
 
 
 using namespace cv;
@@ -13,26 +13,15 @@ using namespace std;
 int main() {
 
 	Mat image = imread("imagen_a_color.jpg", IMREAD_COLOR);
-	ofstream archivo("salida.txt");
-
-    if (!archivo.is_open()) {
-        cerr << "Error al abrir el archivo de salida." << endl;
-        return 1;
-    }
-
-	streambuf *oldStdout = cout.rdbuf(archivo.rdbuf());
+	Mat3b output(image.rows, image.cols);
 
 	for(int r = 0; r < image.rows; r ++) {
 		for(int c = 0; c < image.cols; c++) {
 			Point3_<uchar>* p = image.ptr<Point3_<uchar> >(r, c);
-
-			cout << "(" << static_cast<int>(p->x) << " " << static_cast<int>(p->y) << " " << static_cast<int>(p->z) << ") ";
+			output(r,c) = Vec3b(p->x, p->y, p->z);
 		}
-		cout << endl;
 	}
 
-	cout.rdbuf(oldStdout);
-
-	archivo.close();
+	imwrite("output.jpg", output);
 	return 0;
 }
