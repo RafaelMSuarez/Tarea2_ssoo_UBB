@@ -10,10 +10,16 @@
 using namespace cv;
 using namespace std;
 
-int main() {
+int main(int argc, char* argv[]) {
 
-	Mat image = imread("imagen_a_color.jpg", IMREAD_COLOR);
+	if(argc != 2) {
+		cout << "Debe agregar una imagen" << "\n" ;
+		return 1;
+	}
+
+	Mat image = imread(argv[1], IMREAD_COLOR);
 	Mat output(image.rows, image.cols, CV_8UC1);
+
 	uchar greyW;
 
 	for(int r = 0; r < image.rows; r ++) {
