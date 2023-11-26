@@ -1,4 +1,5 @@
 //install vtk hdf5 fmt
+// g++ grisSecuencial.cpp -o grisSecuencial `pkg-config --cflags --libs opencv4`
 
 #include <iostream>
 #include <opencv2/core/types.hpp>
