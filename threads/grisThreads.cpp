@@ -13,16 +13,22 @@
 using namespace cv;
 using namespace std;
 
-void procesarImagen(const Mat &original, Mat &output, int filaInicio, int filaFin)
+
+// Se cambia a como estaba originalmente en el ejemplo (usando punteros en vez de funciones de OpenCV)
+// La diferencia es clara, pero la documentacion indica que esto es mas peligroso
+void procesarImagen(Mat &original, Mat &output, int filaInicio, int filaFin)
 {
     for (int r = filaInicio; r < filaFin; r++)
     {
+        uchar *op = output.ptr<uchar>(r);
+
         for (int c = 0; c < original.cols; c++)
         {
-            Vec3b p = original.at<Vec3b>(r, c);
+            Point3_<uchar> *p = original.ptr<Point3_<uchar>>(r, c);
             // azul (B) -> x, verde(G) -> y, rojo(R) -> z
-            uchar greyW = static_cast<uchar>(p[2] * 0.114 + p[1] * 0.587 + p[0] * 0.299);
-            output.at<uchar>(r, c) = greyW;
+            uchar greyW = static_cast<uchar>(p->x * 0.114 + p->y * 0.587 + p->z * 0.299);
+
+            op[c] = greyW;
         }
     }
 }

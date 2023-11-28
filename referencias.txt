@@ -4,6 +4,10 @@ valores luminosidad
 
 OpenCV docs
     https://docs.opencv.org/4.8.0/
+    https://docs.opencv.org/4.8.0/db/da5/tutorial_how_to_scan_images.html
+    https://docs.opencv.org/4.8.0/d3/d63/classcv_1_1Mat.html
+    https://docs.opencv.org/4.8.0/d6/dcf/classcv_1_1Vec.html
+    https://docs.opencv.org/4.8.0/d3/d63/classcv_1_1Mat.html#aa5d20fc86d41d59e4d71ae93daee9726
 
 Threads C++
     https://cplusplus.com/reference/thread/thread/
