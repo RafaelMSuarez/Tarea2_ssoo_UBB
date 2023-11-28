@@ -1,5 +1,5 @@
 // install vtk hdf5 fmt
-//  g++ grisThreads.cpp -o grisThreads `pkg-config --cflags --libs opencv4`
+//  g++ -Wall grisSecuencial.cpp -o grisSecuencial `pkg-config --cflags --libs opencv4`
 
 #include <iostream>
 #include <opencv2/core/types.hpp>
@@ -32,8 +32,6 @@ int main(int argc, char *argv[])
 	cout << "Filas (alto): " << imagen.rows << " Columnas (ancho): " << imagen.cols << endl;
 
 	Mat output(imagen.rows, imagen.cols, CV_8UC1);
-
-	uchar greyW;
 
 	auto inicio = chrono::steady_clock::now();
 
