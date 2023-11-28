@@ -7,3 +7,5 @@ OpenCV docs
 
 Threads C++
     https://cplusplus.com/reference/thread/thread/
+    https://cplusplus.com/reference/vector/vector/
+    https://cplusplus.com/reference/string/stoi/
