@@ -1,12 +1,14 @@
 // install vtk hdf5 fmt
-//  g++ grisSecuencial.cpp -o grisSecuencial `pkg-config --cflags --libs opencv4`
+//  g++ -Wall grisThreads.cpp -o grisThreads `pkg-config --cflags --libs opencv4`
 
 #include <iostream>
+#include <thread>
+#include <vector>
+#include <chrono>
 #include <opencv2/core/types.hpp>
 #include <opencv2/core/mat.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
-#include <chrono>
 
 using namespace cv;
 using namespace std;
@@ -25,6 +27,7 @@ void procesarImagen(const Mat &original, Mat &output, int filaInicio, int filaFi
     }
 }
 
+// se crea esta funcion para asegurar que se ingrese un numero
 bool checkNumber(char num[])
 {
     for (int i = 0; num[i] != 0; i++)
@@ -57,6 +60,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    // Se carga la imagen original
     cout << "Cargando imagen ..." << endl;
     Mat imagen = imread(argv[1], IMREAD_COLOR);
 
@@ -68,26 +72,41 @@ int main(int argc, char *argv[])
 
     cout << "Filas (alto): " << imagen.rows << " Columnas (ancho): " << imagen.cols << endl;
 
+    // Se crea el vector para la imagen final CV_8UC1 es el tipo para imagen con escalar de grises
     Mat output(imagen.rows, imagen.cols, CV_8UC1);
 
+    // Se inicio el timer
     auto inicio = chrono::steady_clock::now();
 
     cout << "Comienza conversion ..." << endl;
 
+    // se crea un vector de hebras (vector es variable en tamaño)
+    vector<thread> hebras;
+    int numHebras = stoi(argv[3]);
 
-    // AGREGAR HEBRAS
+    // se divide la imagen por hebra
+    int filasPorHebra = imagen.rows / numHebras;
+    int filaInicio = 0;
 
-    procesarImagen(ref(imagen), ref(output), 0, imagen.rows);
+    // se comienza el ciclo de asignacion
+    for (int i = 0; i < numHebras; i++)
+    {
+        int filaFinal = (i == numHebras - 1) ? imagen.rows : filaInicio + filasPorHebra;
+        hebras.emplace_back(procesarImagen, ref(imagen), ref(output), filaInicio, filaFinal);
+        filaInicio = filaFinal;
+    }
 
-
-    
+    // se cierran las hebras
+    for (auto &hebra : hebras)
+    {
+        hebra.join();
+    }
 
     cout << "Finaliza conversion ..." << endl;
 
     imwrite(static_cast<string>(argv[2]), output);
 
     auto termino = chrono::steady_clock::now();
-
     chrono::duration<double> tiempo = termino - inicio;
 
     cout << "Tiempo de demora: " << tiempo.count() << " segundos" << endl;
