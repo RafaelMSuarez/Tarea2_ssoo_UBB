@@ -13,10 +13,6 @@
 using namespace cv;
 using namespace std;
 
-
-// TODO
-// MAKE FILE
-
 // Se cambia a como estaba originalmente en el ejemplo (usando punteros en vez de funciones de OpenCV)
 // La diferencia es clara, pero la documentacion indica que esto es mas peligroso
 void procesarImagen(Mat &original, Mat &output, int filaInicio, int filaFin)
