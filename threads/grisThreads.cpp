@@ -1,4 +1,4 @@
-// install vtk hdf5 fmt (para archlinux)
+// install opencv vtk hdf5 fmt (para archlinux)
 // al parecer libopencv-dev es suficiente para Debian
 //  g++ -Wall grisThreads.cpp -o grisThreads `pkg-config --cflags --libs opencv4` -lpthread
 
