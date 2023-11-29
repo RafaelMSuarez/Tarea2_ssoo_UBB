@@ -8,6 +8,7 @@
         "*.scss.liquid": "liquid-scss",
         "*.ron": "plaintext",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "iostream": "cpp"
     }
 }

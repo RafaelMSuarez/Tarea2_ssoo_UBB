@@ -54,8 +54,10 @@ int main(int argc, char *argv[])
 	}
 	cout << "Finaliza conversion ..." << endl;
 
+	cout << "Creando imagen ..." << endl;
 	imwrite(static_cast<string>(argv[2]), output);
 
+	cout << "Imagen lista ..." << endl;
 	auto termino = chrono::steady_clock::now();
 
 	chrono::duration<double> tiempo = termino - inicio;

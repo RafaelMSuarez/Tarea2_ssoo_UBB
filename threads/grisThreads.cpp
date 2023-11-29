@@ -14,6 +14,9 @@ using namespace cv;
 using namespace std;
 
 
+// TODO
+// MAKE FILE
+
 // Se cambia a como estaba originalmente en el ejemplo (usando punteros en vez de funciones de OpenCV)
 // La diferencia es clara, pero la documentacion indica que esto es mas peligroso
 void procesarImagen(Mat &original, Mat &output, int filaInicio, int filaFin)
@@ -110,7 +113,9 @@ int main(int argc, char *argv[])
 
     cout << "Finaliza conversion ..." << endl;
 
+    cout << "Creando imagen ..." << endl;
     imwrite(static_cast<string>(argv[2]), output);
+    cout << "Imagen lista ..." << endl;
 
     auto termino = chrono::steady_clock::now();
     chrono::duration<double> tiempo = termino - inicio;
