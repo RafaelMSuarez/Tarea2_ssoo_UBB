@@ -1,5 +1,5 @@
 // install vtk hdf5 fmt
-//  g++ -Wall grisThreads.cpp -o grisThreads `pkg-config --cflags --libs opencv4`
+//  g++ -Wall grisThreads.cpp -o grisThreads `pkg-config --cflags --libs opencv4` -lpthread
 
 #include <iostream>
 #include <thread>

@@ -1,6 +1,6 @@
 CC = g++
-CFLAGS = -Wall
-LIBS = `pkg-config --cflags --libs opencv4`
+CFLAGS = -Wall 
+LIBS = `pkg-config --cflags --libs opencv4` -lpthread
 
 all: grisThreads
 
