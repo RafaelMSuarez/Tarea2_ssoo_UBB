@@ -19,9 +19,19 @@ int main(int argc, char *argv[])
 		cerr << "Faltan argumentos (imagen original y nombre de output)" << endl;
 		return 1;
 	}
+	// Se inicia el timer global
+    auto inicioGlobal = chrono::steady_clock::now();
+
+    // Se inicia el timer de carga de imagen
+    auto inicioCarga = chrono::steady_clock::now();
 
 	cout << "Cargando imagen ..." << endl;
 	Mat imagen = imread(argv[1], IMREAD_COLOR);
+
+	// Se termina el timer de carga de imagen
+    auto finCarga = chrono::steady_clock::now();
+
+	chrono::duration<double> tiempoCarga = finCarga - inicioCarga;
 
 	if (imagen.empty())
 	{
@@ -33,9 +43,10 @@ int main(int argc, char *argv[])
 
 	Mat output(imagen.rows, imagen.cols, CV_8UC1);
 
-	auto inicio = chrono::steady_clock::now();
-
 	cout << "Comienza conversion ..." << endl;
+
+	// Se inicia el timer de proceso de imagen
+    auto inicioProc = chrono::steady_clock::now();
 
 	// Se cambia a como estaba originalmente en el ejemplo (usando punteros en vez de funciones de OpenCV)
 	// La diferencia es clara, pero la documentacion indica que esto es mas peligroso
@@ -52,17 +63,35 @@ int main(int argc, char *argv[])
 			op[c] = greyW;
 		}
 	}
+	// Se termina el timer de proceso de imagen
+    auto finProc = chrono::steady_clock::now();
+
+    chrono::duration<double> tiempoProc = finProc - inicioProc;
+
 	cout << "Finaliza conversion ..." << endl;
+
+	// Se inicia el timer de escritura de imagen
+    auto inicioWrite = chrono::steady_clock::now();
 
 	cout << "Creando imagen ..." << endl;
 	imwrite(static_cast<string>(argv[2]), output);
 
 	cout << "Imagen lista ..." << endl;
-	auto termino = chrono::steady_clock::now();
 
-	chrono::duration<double> tiempo = termino - inicio;
+	// Se termina el timer de escritura de imagen
+    auto finWrite = chrono::steady_clock::now();
 
-	cout << "Tiempo de demora: " << tiempo.count() << " segundos" << endl;
+    chrono::duration<double> tiempoWrite = finWrite - inicioWrite;
+
+	// Termina el timer global
+	auto finGlobal = chrono::steady_clock::now();
+
+	chrono::duration<double> tiempoGlobal = finGlobal - inicioGlobal;
+
+	cout << "Tiempo de demora Global: " << tiempoGlobal.count() << " segundos" << endl;
+	cout << "Tiempo de demora Carga de Imagen: " << tiempoCarga.count() << " segundos" << endl;
+	cout << "Tiempo de demora Procesamiento de imagen: " << tiempoProc.count() << " segundos" << endl;
+	cout << "Tiempo de demora Escritura de imagen: " << tiempoWrite.count() << " segundos" << endl;
 
 	return 0;
 }

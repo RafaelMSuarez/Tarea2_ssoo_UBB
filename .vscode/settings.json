@@ -9,6 +9,7 @@
         "*.ron": "plaintext",
         "string": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "chrono": "cpp"
     }
 }
