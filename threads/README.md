@@ -11,7 +11,7 @@ make clean
 
 **Ejecutar el programa**
 ```bash
-# Indicar nombre de imagen de entrada, nombre de imagen salida y numero de hebras a utilizar. Ejemplo:
+# Indicar nombre de imagen de entrada, nombre de imagen salida y número de hebras a utilizar. Ejemplo:
 ./grisThreads nombre_imagen_a_color.png output.png 4
 ```
 
