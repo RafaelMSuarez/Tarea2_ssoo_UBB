@@ -1,4 +1,4 @@
-## Desarrollo
+# Desarrollo
 Se llevó a cabo el siguiente desarrollo por equipo:
 * Se especifican los datos principales (Procesador, Memoria RAM, si posee SSD o Disco Duro y Sistema Operativo)
 * Se obtiene el número de hebras disponibles utilizando la función **std::thread::hardware_concurrency();**
@@ -17,7 +17,7 @@ Se llevó a cabo el siguiente desarrollo por equipo:
 
 A continuación los detalles por equipo:
 
-### Equipo 1:
+## Equipo 1:
 
 * Procesador:
 * Memoria RAM:
@@ -25,25 +25,63 @@ A continuación los detalles por equipo:
 * Tipo de memoria secundaria:
 * Sistema operativo:
 ---------------------------------------------------
-* Tiempo promedio de lectura de imagen:
-* Tiempo promedio de procesamiento de imagen:
-* Tiempo promedio de escritura de imagen:
-* Tiempo promedio global:
+### Secuencial
+| Tiempo promedio de  | Tiempo |
+| ------------- | ------------- |
+| **Lectura de imagen**  | |
+| **Procesamiento de imagen**  | |
+| **Escritura de imagen**  | |
+| **Promedio Global** | |
 
-### Equipo 2:
+### Threads
+| Tiempo promedio de  | 2 hebras | 4 hebras |
+| ------------- | ------------- | ------------- |
+| **Lectura de imagen**  | | |
+| **Procesamiento de imagen**  | | |
+| **Escritura de imagen**  | | |
+| **Promedio Global** | | |
 
+### OpenMP
+| Tiempo promedio de  | 2 hebras | 4 hebras |
+| ------------- | ------------- | ------------- |
+| **Lectura de imagen**  | | |
+| **Procesamiento de imagen**  | | |
+| **Escritura de imagen**  | | |
+| **Promedio Global** | | |
+
+## Equipo 2:
 * Procesador: **Intel i5-10300H (8) 4.5GHz**
 * Memoria RAM: **32 GB**
 * Número de hebras máxima: **8**
 * Tipo de memoria secundaria: **SSD**
 * Sistema operativo: **ArcoLinux (Kernel: 6.6.3-arch1-1)**
 ---------------------------------------------------
-* Tiempo promedio de lectura de imagen:
-* Tiempo promedio de procesamiento de imagen:
-* Tiempo promedio de escritura de imagen:
-* Tiempo promedio global:
+### Secuencial
+| Tiempo promedio de  | Tiempo |
+| ------------- | ------------- |
+| **Lectura de imagen**  | |
+| **Procesamiento de imagen**  | |
+| **Escritura de imagen**  | |
+| **Promedio Global** | |
 
-### Equipo 3:
+### Threads
+| Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras |
+| ------------- | ------------- | ------------- | ------------- |
+| **Lectura de imagen**  | | | |
+| **Procesamiento de imagen**  | | | |
+| **Escritura de imagen**  | | | |
+| **Promedio Global** | | | |
+
+### OpenMP
+| Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras |
+| ------------- | ------------- | ------------- | ------------- |
+| **Lectura de imagen**  | | | |
+| **Procesamiento de imagen**  | | | |
+| **Escritura de imagen**  | | | |
+| **Promedio Global** | | | |
+
+
+## Equipo 3:
 
 * Procesador: **Intel Xeon Silver 4210R (20) 3.2GHz**
 * Memoria RAM: **64 GB**
@@ -51,11 +89,29 @@ A continuación los detalles por equipo:
 * Tipo de memoria secundaria: **HDD**
 * Sistema operativo: **Debian GNU/Linux 11 (Kernel: 5.10.0-23-amd64)**
 ---------------------------------------------------
-* Tiempo promedio de lectura de imagen:
-* Tiempo promedio de procesamiento de imagen:
-* Tiempo promedio de escritura de imagen:
-* Tiempo promedio global:
+### Secuencial
+| Tiempo promedio de  | Tiempo |
+| ------------- | ------------- |
+| **Lectura de imagen**  | |
+| **Procesamiento de imagen**  | |
+| **Escritura de imagen**  | |
+| **Promedio Global** | |
 
+### Threads
+| Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras |
+| ------------- | ------------- | ------------- | ------------- |
+| **Lectura de imagen**  | | | |
+| **Procesamiento de imagen**  | | | |
+| **Escritura de imagen**  | | | |
+| **Promedio Global** | | | |
+
+### OpenMP
+| Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras |
+| ------------- | ------------- | ------------- | ------------- |
+| **Lectura de imagen**  | | | |
+| **Procesamiento de imagen**  | | | |
+| **Escritura de imagen**  | | | |
+| **Promedio Global** | | | |
 ## Conclusión:
 
 Se concluye que para los tiempos de lectura y escritura de imagen, la versión del código no influye directamente en el desempeño final. Esto ya que son **funciones secuenciales** que vienen directamente de la biblioteca de **OpenCV**. Por otro lado, el **tipo de memoria secundaria** influye directamente en los tiempos.
