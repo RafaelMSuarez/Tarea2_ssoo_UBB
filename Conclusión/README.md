@@ -32,11 +32,11 @@ A continuación los detalles por equipo:
 
 ### Equipo 2:
 
-* **Procesador:** Intel i5-10300H (8) 4.5GHz
-* **Memoria RAM:** 32 GB
-* **Número de hebras máxima:** 8
-* **Tipo de memoria secundaria:** SSD
-* **Sistema operativo:** ArcoLinux (Kernel: 6.6.3-arch1-1)
+* Procesador: **Intel i5-10300H (8) 4.5GHz**
+* Memoria RAM: **32 GB**
+* Número de hebras máxima: **8**
+* Tipo de memoria secundaria: **SSD**
+* Sistema operativo: **ArcoLinux (Kernel: 6.6.3-arch1-1)**
 ---------------------------------------------------
 * Tiempo promedio de lectura de imagen:
 * Tiempo promedio de procesamiento de imagen:
