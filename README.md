@@ -7,6 +7,7 @@ Transformación de imagen de color a escala de grises, utilizando un código sec
 ### Debian
 ```bash
 sudo apt-get install libopencv-dev
+sudo apt-get install libomp-dev
 ```
 ### ArchLinux
 ```bash
@@ -14,6 +15,7 @@ sudo pacman -S opencv
 sudo pacman -S vtk
 sudo pacman -S hdf5
 sudo pacman -S fmt
+sudo pacman -S openmp
 ```
 ## Uso
 
