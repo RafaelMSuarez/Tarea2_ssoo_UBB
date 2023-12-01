@@ -12,7 +12,7 @@ Se llevó a cabo el siguiente desarrollo por equipo:
 
 ---
 
-- Por cada versión del código, se realiza un promedio.
+- Por cada versión del código, se realiza un promedio del tiempo en segundos (s).
 
 A continuación los detalles por equipo:
 
