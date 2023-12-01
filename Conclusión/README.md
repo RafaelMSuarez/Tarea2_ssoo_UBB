@@ -8,10 +8,12 @@ Se llevó a cabo el siguiente desarrollo por equipo:
 * Se realizan 10 pruebas de la versión Threads utilizando 2 hebras.
 * Se realizan 10 pruebas de la versión Threads utilizando 4 hebras.
 * Se realizan 10 pruebas de la versión Threads utilizando 8 hebras (Equipo 2 y 3).
+* Se realizan 10 pruebas de la versión Threads utilizando 16 hebras (Equipo 3).
 ---------------------------------------------------
 * Se realizan 10 pruebas de la versión OpenMP utilizando 2 hebras.
 * Se realizan 10 pruebas de la versión OpenMP utilizando 4 hebras.
 * Se realizan 10 pruebas de la versión OpenMP utilizando 8 hebras (Equipo 2 y 3).
+* Se realizan 10 pruebas de la versión OpenMP utilizando 16 hebras (Equipo 3).
 ---------------------------------------------------
 * Por cada versión del código, se realiza un promedio.
 
@@ -31,7 +33,7 @@ A continuación los detalles por equipo:
 | **Lectura de imagen**  | |
 | **Procesamiento de imagen**  | |
 | **Escritura de imagen**  | |
-| **Promedio Global** | |
+| **Global** | |
 
 ### Threads
 | Tiempo promedio de  | 2 hebras | 4 hebras |
@@ -39,7 +41,7 @@ A continuación los detalles por equipo:
 | **Lectura de imagen**  | | |
 | **Procesamiento de imagen**  | | |
 | **Escritura de imagen**  | | |
-| **Promedio Global** | | |
+| **Global** | | |
 
 ### OpenMP
 | Tiempo promedio de  | 2 hebras | 4 hebras |
@@ -47,7 +49,7 @@ A continuación los detalles por equipo:
 | **Lectura de imagen**  | | |
 | **Procesamiento de imagen**  | | |
 | **Escritura de imagen**  | | |
-| **Promedio Global** | | |
+| **Global** | | |
 
 ## Equipo 2:
 * Procesador: **Intel i5-10300H (8) 4.5GHz**
@@ -62,7 +64,7 @@ A continuación los detalles por equipo:
 | **Lectura de imagen**  | |
 | **Procesamiento de imagen**  | |
 | **Escritura de imagen**  | |
-| **Promedio Global** | |
+| **Global** | |
 
 ### Threads
 | Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras |
@@ -70,7 +72,7 @@ A continuación los detalles por equipo:
 | **Lectura de imagen**  | | | |
 | **Procesamiento de imagen**  | | | |
 | **Escritura de imagen**  | | | |
-| **Promedio Global** | | | |
+| **Global** | | | |
 
 ### OpenMP
 | Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras |
@@ -78,7 +80,7 @@ A continuación los detalles por equipo:
 | **Lectura de imagen**  | | | |
 | **Procesamiento de imagen**  | | | |
 | **Escritura de imagen**  | | | |
-| **Promedio Global** | | | |
+| **Global** | | | |
 
 
 ## Equipo 3:
@@ -95,23 +97,23 @@ A continuación los detalles por equipo:
 | **Lectura de imagen**  | |
 | **Procesamiento de imagen**  | |
 | **Escritura de imagen**  | |
-| **Promedio Global** | |
+| **Global** | |
 
 ### Threads
-| Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras |
-| ------------- | ------------- | ------------- | ------------- |
-| **Lectura de imagen**  | | | |
-| **Procesamiento de imagen**  | | | |
-| **Escritura de imagen**  | | | |
-| **Promedio Global** | | | |
+| Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras | 16 hebras |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| **Lectura de imagen**  | | | | |
+| **Procesamiento de imagen**  | | | | |
+| **Escritura de imagen**  | | | | |
+| **Global** | | | | |
 
 ### OpenMP
-| Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras |
-| ------------- | ------------- | ------------- | ------------- |
-| **Lectura de imagen**  | | | |
-| **Procesamiento de imagen**  | | | |
-| **Escritura de imagen**  | | | |
-| **Promedio Global** | | | |
+| Tiempo promedio de  | 2 hebras | 4 hebras | 8 hebras | 16 hebras |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| **Lectura de imagen**  | | | | |
+| **Procesamiento de imagen**  | | | | |
+| **Escritura de imagen**  | | | | |
+| **Global** | | | | |
 ## Conclusión:
 
 Se concluye que para los tiempos de lectura y escritura de imagen, la versión del código no influye directamente en el desempeño final. Esto ya que son **funciones secuenciales** que vienen directamente de la biblioteca de **OpenCV**. Por otro lado, el **tipo de memoria secundaria** influye directamente en los tiempos.
