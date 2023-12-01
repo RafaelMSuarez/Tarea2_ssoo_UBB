@@ -29,7 +29,14 @@ make
 # Para versiones paralelas indicar al final el numero de hebras a utilizar. Ejemplo:
 ./grisThreads nombre_imagen_a_color.png output.png 4
 ```
+
+## Conclusión
+Se incluye un análisis en el archivo [Conclusión](./Conclusión/README.md)
 ## Referencias
+
+**Imagen utilizada en las pruebas**
+* [NASA/ESA/CSA: Los pilares de la Creación](https://esawebb.org/images/weic2216b/)
+* [Descarga directa de imagen (163.4MB)](https://esawebb.org/media/archives/images/original/weic2216b.tif)
 
 **Valores método luminosidad:**
 * [OpenCV](https://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#void%20cvtColor%28InputArray%20src,%20OutputArray%20dst,%20int%20code,%20int%20dstCn%29)
