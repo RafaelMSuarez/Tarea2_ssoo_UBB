@@ -1,0 +1,15 @@
+valores luminosidad
+    https://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#void%20cvtColor%28InputArray%20src,%20OutputArray%20dst,%20int%20code,%20int%20dstCn%29
+    https://mmuratarat.github.io/2020-05-13/rgb_to_grayscale_formulas
+
+OpenCV docs
+    https://docs.opencv.org/4.8.0/
+    https://docs.opencv.org/4.8.0/db/da5/tutorial_how_to_scan_images.html
+    https://docs.opencv.org/4.8.0/d3/d63/classcv_1_1Mat.html
+    https://docs.opencv.org/4.8.0/d6/dcf/classcv_1_1Vec.html
+    https://docs.opencv.org/4.8.0/d3/d63/classcv_1_1Mat.html#aa5d20fc86d41d59e4d71ae93daee9726
+
+Threads C++
+    https://cplusplus.com/reference/thread/thread/
+    https://cplusplus.com/reference/vector/vector/
+    https://cplusplus.com/reference/string/stoi/
