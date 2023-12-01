@@ -28,30 +28,30 @@ A continuación los detalles por equipo:
 
 ### Secuencial
 
-| Tiempo promedio de          | Tiempo |
-| --------------------------- | ------ |
-| **Lectura de imagen**       |        |
-| **Procesamiento de imagen** |        |
-| **Escritura de imagen**     |        |
-| **Global**                  |        |
+| Tiempo promedio de          | Tiempo (s) |
+| --------------------------- | ---------- |
+| **Lectura de imagen**       |            |
+| **Procesamiento de imagen** |            |
+| **Escritura de imagen**     |            |
+| **Global**                  |            |
 
 ### Threads
 
-| Tiempo promedio de          | 2 hebras | 4 hebras |
-| --------------------------- | -------- | -------- |
-| **Lectura de imagen**       |          |          |
-| **Procesamiento de imagen** |          |          |
-| **Escritura de imagen**     |          |          |
-| **Global**                  |          |          |
+| Tiempo promedio de          | 2 hebras (s) | 4 hebras (s) |
+| --------------------------- | ------------ | ------------ |
+| **Lectura de imagen**       |              |              |
+| **Procesamiento de imagen** |              |              |
+| **Escritura de imagen**     |              |              |
+| **Global**                  |              |              |
 
 ### OpenMP
 
-| Tiempo promedio de          | 2 hebras | 4 hebras |
-| --------------------------- | -------- | -------- |
-| **Lectura de imagen**       |          |          |
-| **Procesamiento de imagen** |          |          |
-| **Escritura de imagen**     |          |          |
-| **Global**                  |          |          |
+| Tiempo promedio de          | 2 hebras (s) | 4 hebras |
+| --------------------------- | ------------ | -------- |
+| **Lectura de imagen**       |              |          |
+| **Procesamiento de imagen** |              |          |
+| **Escritura de imagen**     |              |          |
+| **Global**                  |              |          |
 
 ## Equipo 2:
 
@@ -65,30 +65,30 @@ A continuación los detalles por equipo:
 
 ### Secuencial
 
-| Tiempo promedio de          | Tiempo   |
-| --------------------------- | -------- |
-| **Lectura de imagen**       | 1.554290 |
-| **Procesamiento de imagen** | 0.872540 |
-| **Escritura de imagen**     | 1.783190 |
-| **Global**                  | 4.210074 |
+| Tiempo promedio de          | Tiempo (s) |
+| --------------------------- | ---------- |
+| **Lectura de imagen**       | 1.554290   |
+| **Procesamiento de imagen** | 0.872540   |
+| **Escritura de imagen**     | 1.783190   |
+| **Global**                  | 4.210074   |
 
 ### Threads
 
-| Tiempo promedio de          | 2 hebras | 4 hebras | 8 hebras |
-| --------------------------- | -------- | -------- | -------- |
-| **Lectura de imagen**       | 1.557578 | 1.552790 | 1.552344 |
-| **Procesamiento de imagen** | 0.438897 | 0.206879 | 0.185908 |
-| **Escritura de imagen**     | 1.709784 | 1.875609 | 2.231251 |
-| **Global**                  | 3.706330 | 3.635341 | 3.969575 |
+| Tiempo promedio de          | 2 hebras (s) | 4 hebras (s) | 8 hebras (s) |
+| --------------------------- | ------------ | ------------ | ------------ |
+| **Lectura de imagen**       | 1.557578     | 1.552790     | 1.552344     |
+| **Procesamiento de imagen** | 0.438897     | 0.206879     | 0.185908     |
+| **Escritura de imagen**     | 1.709784     | 1.875609     | 2.231251     |
+| **Global**                  | 3.706330     | 3.635341     | 3.969575     |
 
 ### OpenMP
 
-| Tiempo promedio de          | 2 hebras | 4 hebras | 8 hebras |
-| --------------------------- | -------- | -------- | -------- |
-| **Lectura de imagen**       | 1.554792 | 1.551888 | 1.556881 |
-| **Procesamiento de imagen** | 0.526387 | 0.239978 | 0.195848 |
-| **Escritura de imagen**     | 1.725189 | 1.545978 | 1.522228 |
-| **Global**                  | 3.806442 | 3.337906 | 3.275020 |
+| Tiempo promedio de          | 2 hebras (s) | 4 hebras (s) | 8 hebras (s) |
+| --------------------------- | ------------ | ------------ | ------------ |
+| **Lectura de imagen**       | 1.554792     | 1.551888     | 1.556881     |
+| **Procesamiento de imagen** | 0.526387     | 0.239978     | 0.195848     |
+| **Escritura de imagen**     | 1.725189     | 1.545978     | 1.522228     |
+| **Global**                  | 3.806442     | 3.337906     | 3.275020     |
 
 ## Equipo 3:
 
@@ -102,30 +102,30 @@ A continuación los detalles por equipo:
 
 ### Secuencial
 
-| Tiempo promedio de          | Tiempo |
-| --------------------------- | ------ |
-| **Lectura de imagen**       |        |
-| **Procesamiento de imagen** |        |
-| **Escritura de imagen**     |        |
-| **Global**                  |        |
+| Tiempo promedio de          | Tiempo (s) |
+| --------------------------- | ---------- |
+| **Lectura de imagen**       |            |
+| **Procesamiento de imagen** |            |
+| **Escritura de imagen**     |            |
+| **Global**                  |            |
 
 ### Threads
 
-| Tiempo promedio de          | 2 hebras | 4 hebras | 8 hebras | 16 hebras |
-| --------------------------- | -------- | -------- | -------- | --------- |
-| **Lectura de imagen**       |          |          |          |           |
-| **Procesamiento de imagen** |          |          |          |           |
-| **Escritura de imagen**     |          |          |          |           |
-| **Global**                  |          |          |          |           |
+| Tiempo promedio de          | 2 hebras (s) | 4 hebras (s) | 8 hebras (s) | 16 hebras (s) |
+| --------------------------- | ------------ | ------------ | ------------ | ------------- |
+| **Lectura de imagen**       |              |              |              |               |
+| **Procesamiento de imagen** |              |              |              |               |
+| **Escritura de imagen**     |              |              |              |               |
+| **Global**                  |              |              |              |               |
 
 ### OpenMP
 
-| Tiempo promedio de          | 2 hebras | 4 hebras | 8 hebras | 16 hebras |
-| --------------------------- | -------- | -------- | -------- | --------- |
-| **Lectura de imagen**       |          |          |          |           |
-| **Procesamiento de imagen** |          |          |          |           |
-| **Escritura de imagen**     |          |          |          |           |
-| **Global**                  |          |          |          |           |
+| Tiempo promedio de          | 2 hebras (s) | 4 hebras (s) | 8 hebras (s) | 16 hebras (s) |
+| --------------------------- | ------------ | ------------ | ------------ | ------------- |
+| **Lectura de imagen**       |              |              |              |               |
+| **Procesamiento de imagen** |              |              |              |               |
+| **Escritura de imagen**     |              |              |              |               |
+| **Global**                  |              |              |              |               |
 
 ## Conclusión:
 
