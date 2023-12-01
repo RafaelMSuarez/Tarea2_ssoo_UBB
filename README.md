@@ -42,3 +42,6 @@ make
 * [C++: Thread](https://cplusplus.com/reference/thread/thread/)
 * [C++: Vector](https://cplusplus.com/reference/vector/vector/)
 * [C++: Stoi](https://cplusplus.com/reference/string/stoi/)
+
+**Documentación OpenMP:**
+* [OpenMP: RefCard](https://www.openmp.org/wp-content/uploads/OpenMPRefCard-5-2-web.pdf)
