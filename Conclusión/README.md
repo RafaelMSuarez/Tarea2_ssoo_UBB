@@ -136,4 +136,4 @@ No obstante, el tiempo de **procesamiento de imagen** si depende de la versión 
 ## Referencia
 
 Se incluye el archivo Excel con todos los datos de las pruebas:
-* [Excel](./Conclusion%20Tarea%202%20ssoo%20-%20Copy.xlsx)
+* [Excel](./Conclusion%20Tarea%202%20ssoo.xlsx)
