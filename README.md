@@ -40,7 +40,6 @@ Se incluye un análisis en el archivo [Conclusión](./Conclusión/README.md)
 
 **Imagen recomendación**
 * [NASA/ESA: Galaxia Andrómeda](https://esahubble.org/images/heic1502a/)
-* [Descarga directa de imagen (4.3GB)](https://esahubble.org/media/archives/images/original/heic1502a.psb)
 * [Descarga versión publication 40K (1.7GB)](https://esahubble.org/media/archives/images/publicationtiff40k/heic1502a.tif)
 
 **Valores método luminosidad:**
