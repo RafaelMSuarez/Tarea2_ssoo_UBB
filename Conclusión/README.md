@@ -136,4 +136,4 @@ No obstante, el tiempo de **procesamiento de imagen** si depende de la versión 
 ## Referencia
 
 Se incluye el archivo Excel con todos los datos de las pruebas:
-* [Excel](https://ubiobiocl-my.sharepoint.com/:x:/g/personal/rafael_martinez1601_alumnos_ubiobio_cl/EViWaJPg8LBLsQuLZdHniacBha-vl9UKIM26knF1u41qzw?e=MjxeKx)
+* [Excel](./Conclusion%20Tarea%202%20ssoo%20-%20Copy.xlsx)
