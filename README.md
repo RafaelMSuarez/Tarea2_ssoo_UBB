@@ -41,6 +41,7 @@ Se incluye un análisis en el archivo [Conclusión](./Conclusión/README.md)
 **Imagen recomendación**
 * [NASA/ESA: Galaxia Andrómeda](https://esahubble.org/images/heic1502a/)
 * [Descarga directa de imagen (4.3GB)](https://esahubble.org/media/archives/images/original/heic1502a.psb)
+* [Descarga versión publication 40K (1.7GB)](https://esahubble.org/media/archives/images/publicationtiff40k/heic1502a.tif)
 
 **Valores método luminosidad:**
 * [OpenCV](https://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#void%20cvtColor%28InputArray%20src,%20OutputArray%20dst,%20int%20code,%20int%20dstCn%29)
