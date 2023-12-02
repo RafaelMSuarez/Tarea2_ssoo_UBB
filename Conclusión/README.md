@@ -134,7 +134,7 @@ Se concluye que para los tiempos de lectura y escritura de imagen, la versión d
 No obstante, el tiempo de **procesamiento de imagen** si depende de la versión del código, ya que en esta sección se encuentra la optimización a través de hebras. En los resultados se observa que a medida que aumentan las hebras, el tiempo disminuye. De secuencial a 2 hebras, el **tiempo disminuye casi en la mitad**, lo que presenta un buen nivel de eficiencia. Pero a medida que se aumentan las hebras, si bien el porcentaje se mantiene alto, los valores real ya no cambian de manera significativa. Es decir, aunque la variación entre 0.2399 segundos y 0.1958 sea de aprox. **1.22x**, el cambio es solamente **0.0441 segundos**, lo cual no se considera un cambio tan significativo. Finalmente se destaca, que a medida que aumentan las hebras, la razón de cambio va **disminuyendo**.
 
 ### Comentario Extra
-A pesar de que no se incluye en los datos del desarrollo, se probó con la imagen de referencia de **1.7GB**. En este caso, sucedió el efecto donde, utilizando 16 hebras se consiguió un tiempo de procesamiento de **0.5288 segundos**, mientras que con 20 hebras, se consiguió un tiempo de **0.6744 segundos**. Esto ultimo indica que un aumento en el número de hebras, no siempre mejora el rendimiento de un proceso.
+A pesar de que no se incluye en los datos del desarrollo, se probó con la imagen de referencia de **1.7GB**. En este caso, sucedió el efecto donde, utilizando 16 hebras se consiguió un tiempo de procesamiento de **0.5288 segundos**, mientras que con 20 hebras, se consiguió un tiempo de **0.6744 segundos**. Esto último indica que un aumento en el número de hebras, no siempre mejora el rendimiento de un proceso.
 
 ## Referencia
 
