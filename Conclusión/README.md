@@ -129,6 +129,11 @@ A continuación los detalles por equipo:
 
 ## Conclusión:
 
-Se concluye que para los tiempos de lectura y escritura de imagen, la versión del código no influye directamente en el desempeño final. Esto ya que son **funciones secuenciales** que vienen directamente de la biblioteca de **OpenCV**. Por otro lado, el **tipo de memoria secundaria** influye directamente en los tiempos.
+Se concluye que para los tiempos de lectura y escritura de imagen, la versión del código no influye directamente en el desempeño final. Esto ya que son **funciones secuenciales** que vienen directamente de la biblioteca de **OpenCV**. Por otro lado, el **tipo de memoria secundaria** si influye directamente en los tiempos.
 
-No obstante, el tiempo de **procesamiento de imagen** si depende de la versión del código, ya que en esta sección se encuentra la optimización a través de hebras. En los resultados se observa que a medida que aumentan las hebras, el tiempo disminuye. De secuencial a 2 hebras, el tiempo disminuye casi en la mitad, lo que presenta un buen nivel de eficiencia. Pero a medida que se aumentan las hebras, si bien el porcentaje se mantiene alto, los valores real ya no cambian de manera significativa. Es decir, aunque la variación entre 0.2399 segundos y 0.1958 sea de aprox. 1.22x, el cambio es solamente 0.0441 segundos, lo cual no se considera un cambio tan significativo. Tambien se destaca, que a medida que aumentan las hebras, la razón de cambio va disminuyendo.
+No obstante, el tiempo de **procesamiento de imagen** si depende de la versión del código, ya que en esta sección se encuentra la optimización a través de hebras. En los resultados se observa que a medida que aumentan las hebras, el tiempo disminuye. De secuencial a 2 hebras, el **tiempo disminuye casi en la mitad**, lo que presenta un buen nivel de eficiencia. Pero a medida que se aumentan las hebras, si bien el porcentaje se mantiene alto, los valores real ya no cambian de manera significativa. Es decir, aunque la variación entre 0.2399 segundos y 0.1958 sea de aprox. **1.22x**, el cambio es solamente **0.0441 segundos**, lo cual no se considera un cambio tan significativo. Finalmente se destaca, que a medida que aumentan las hebras, la razón de cambio va **disminuyendo**.
+
+## Referencia
+
+Se incluye el archivo Excel con todos los datos de las pruebas:
+[Excel](https://ubiobiocl-my.sharepoint.com/:x:/g/personal/rafael_martinez1601_alumnos_ubiobio_cl/EViWaJPg8LBLsQuLZdHniacBha-vl9UKIM26knF1u41qzw?e=MjxeKx)
