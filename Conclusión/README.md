@@ -18,11 +18,11 @@ A continuación los detalles por equipo:
 
 ## Equipo 1:
 
-- Procesador:
-- Memoria RAM:
-- Número de hebras máxima:
-- Tipo de memoria secundaria:
-- Sistema operativo:
+- Procesador: **Intel i5-7200U (4) 3.1GHz**
+- Memoria RAM: **8 GB**
+- Número de hebras máxima: **4**
+- Tipo de memoria secundaria: **SSD**
+- Sistema operativo: **Ubuntu 22.04.3(Kernel: 6.2.0-37-generic)**
 
 ---
 
@@ -30,28 +30,28 @@ A continuación los detalles por equipo:
 
 | Tiempo promedio de          | Tiempo (s) |
 | --------------------------- | ---------- |
-| **Lectura de imagen**       |            |
-| **Procesamiento de imagen** |            |
-| **Escritura de imagen**     |            |
-| **Global**                  |            |
+| **Lectura de imagen**       | 3.707506   |
+| **Procesamiento de imagen** | 1.428509   |
+| **Escritura de imagen**     | 3.388152   |
+| **Global**                  | 8.524363   |
 
 ### Threads
 
 | Tiempo promedio de          | 2 hebras (s) | 4 hebras (s) |
 | --------------------------- | ------------ | ------------ |
-| **Lectura de imagen**       |              |              |
-| **Procesamiento de imagen** |              |              |
-| **Escritura de imagen**     |              |              |
-| **Global**                  |              |              |
+| **Lectura de imagen**       | 3.854473     | 3.922753     |
+| **Procesamiento de imagen** | 0.950032     | 0.761235     |
+| **Escritura de imagen**     | 3.237478     | 3.335088     |
+| **Global**                  | 8.042322     | 8.019489     |
 
 ### OpenMP
 
 | Tiempo promedio de          | 2 hebras (s) | 4 hebras |
 | --------------------------- | ------------ | -------- |
-| **Lectura de imagen**       |              |          |
-| **Procesamiento de imagen** |              |          |
-| **Escritura de imagen**     |              |          |
-| **Global**                  |              |          |
+| **Lectura de imagen**       | 3.912085     | 3.924639 |
+| **Procesamiento de imagen** | 1.008288     | 0.829612 |
+| **Escritura de imagen**     | 3.214152     | 3.239345 |
+| **Global**                  | 8.134793     | 7.994240 |
 
 ## Equipo 2:
 
@@ -104,31 +104,31 @@ A continuación los detalles por equipo:
 
 | Tiempo promedio de          | Tiempo (s) |
 | --------------------------- | ---------- |
-| **Lectura de imagen**       |            |
-| **Procesamiento de imagen** |            |
-| **Escritura de imagen**     |            |
-| **Global**                  |            |
+| **Lectura de imagen**       | 2.999519   |
+| **Procesamiento de imagen** | 1.165067   |
+| **Escritura de imagen**     | 3.297892   |
+| **Global**                  | 7.462545   |
 
 ### Threads
 
 | Tiempo promedio de          | 2 hebras (s) | 4 hebras (s) | 8 hebras (s) | 16 hebras (s) |
 | --------------------------- | ------------ | ------------ | ------------ | ------------- |
-| **Lectura de imagen**       |              |              |              |               |
-| **Procesamiento de imagen** |              |              |              |               |
-| **Escritura de imagen**     |              |              |              |               |
-| **Global**                  |              |              |              |               |
+| **Lectura de imagen**       | 2.991088     | 2.988787     | 2.979088     | 2.993952      |
+| **Procesamiento de imagen** | 0.636169     | 0.323762     | 0.272991     | 0.147039      |
+| **Escritura de imagen**     | 3.314108     | 3.323026     | 3.321029     | 3.338988      |
+| **Global**                  | 6.941457     | 6.635664     | 6.573193     | 6.480055      |
 
 ### OpenMP
 
 | Tiempo promedio de          | 2 hebras (s) | 4 hebras (s) | 8 hebras (s) | 16 hebras (s) |
 | --------------------------- | ------------ | ------------ | ------------ | ------------- |
-| **Lectura de imagen**       |              |              |              |               |
-| **Procesamiento de imagen** |              |              |              |               |
-| **Escritura de imagen**     |              |              |              |               |
-| **Global**                  |              |              |              |               |
+| **Lectura de imagen**       | 2.980923     | 2.980787     | 1.551888     | 2.978872      |
+| **Procesamiento de imagen** | 0.700944     | 0.367326     | 0.239978     | 0.153601      |
+| **Escritura de imagen**     | 3.309351     | 3.306857     | 1.545978     | 3.279601      |
+| **Global**                  | 6.991288     | 6.655043     | 3.337906     | 6.412150      |
 
 ## Conclusión:
 
 Se concluye que para los tiempos de lectura y escritura de imagen, la versión del código no influye directamente en el desempeño final. Esto ya que son **funciones secuenciales** que vienen directamente de la biblioteca de **OpenCV**. Por otro lado, el **tipo de memoria secundaria** influye directamente en los tiempos.
 
-No obstante, el tiempo de **procesamiento de imagen** si depende de la versión del código, ya que en esta sección se encuentra la optimización a través de hebras.
+No obstante, el tiempo de **procesamiento de imagen** si depende de la versión del código, ya que en esta sección se encuentra la optimización a través de hebras. En los resultados se observa que a medida que aumentan las hebras, el tiempo disminuye. De secuencial a 2 hebras, el tiempo disminuye casi en la mitad, lo que presenta un buen nivel de eficiencia. Pero a medida que se aumentan las hebras, si bien el porcentaje se mantiene alto, los valores real ya no cambian de manera significativa. Es decir, aunque la variación entre 0.2399 segundos y 0.1958 sea de aprox. 1.22x, el cambio es solamente 0.0441 segundos, lo cual no se considera un cambio tan significativo. Tambien se destaca, que a medida que aumentan las hebras, la razón de cambio va disminuyendo.
